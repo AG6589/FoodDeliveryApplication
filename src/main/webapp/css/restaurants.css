@@ -1,0 +1,289 @@
+@charset "UTF-8";
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+  background: radial-gradient(circle at top, #111827, #020617);
+  color: #e5e7eb;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 16px 32px;
+  background: rgba(2, 6, 23, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #1e293b;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #60a5fa;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #cbd5f5;
+  font-size: 14px;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #60a5fa;
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* CART BADGE */
+.cart-link {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 999px;
+}
+
+/* RIGHT SIDE */
+.nav-right {
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+}
+
+.nav-right input {
+  background: #020617;
+  border: 1px solid #1e293b;
+  color: #e5e7eb;
+  padding: 8px 14px;
+  border-radius: 999px;
+  width: 220px;
+}
+
+.nav-right input::placeholder {
+  color: #64748b;
+}
+
+.checkout-btn {
+  padding: 8px 20px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #22d3ee, #3b82f6);
+  color: #020617;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.checkout-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ================= HERO ================= */
+.hero {
+  padding: 64px 8% 40px;
+  background: linear-gradient(
+    135deg,
+    #0b1220 0%,
+    #0f1b2d 50%,
+    #0b1220 100%
+  );
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  color: #94a3b8;
+  max-width: 620px;
+}
+
+/* ================= GRID ================= */
+.restaurant-grid {
+  padding: 40px 8% 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+/* ================= CARD ================= */
+.restaurant-card {
+  background: linear-gradient(
+    180deg,
+    #020617 0%,
+    #020617 60%,
+    #030712 100%
+  );
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #1e293b;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.65);
+}
+
+/* ================= IMAGE ================= */
+.img-wrap {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ETA BADGE */
+.eta {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: #16a34a;
+  color: #020617;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+/* ================= CARD BODY ================= */
+.card-body {
+  padding: 18px;
+}
+
+.card-body h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* RATING + AREA */
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.rating {
+  background: #052e16;
+  color: #22c55e;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.area {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* DESCRIPTION */
+.desc {
+  font-size: 14px;
+  color: #9ca3af;
+  line-height: 1.45;
+  margin-bottom: 16px;
+}
+
+/* ================= ACTIONS ================= */
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.add-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #22d3ee, #3b82f6);
+  color: #020617;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.view-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e5e7eb;
+  text-align: center;
+  text-decoration: none;
+}
+
+.add-btn:hover,
+.view-btn:hover {
+  opacity: 0.9;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 18px;
+  }
+
+  .nav-right input {
+    display: none;
+  }
+
+  .hero {
+    padding: 36px 20px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .restaurant-grid {
+    padding: 20px 20px 40px;
+    gap: 22px;
+  }
+} 

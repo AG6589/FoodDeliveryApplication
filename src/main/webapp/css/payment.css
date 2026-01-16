@@ -1,0 +1,172 @@
+@charset "UTF-8";
+
+/* ================= PAGE ================= */
+.payment-container {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.payment-card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 18px;
+  padding: 32px;
+  max-width: 420px;
+  width: 100%;
+}
+
+/* ================= TITLE ================= */
+.payment-card h2 {
+  text-align: center;
+  color: #f1f5f9;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 24px;
+}
+
+/* ================= BILL ================= */
+.bill div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  color: #cbd5f5;
+}
+
+.bill .final {
+  font-size: 18px;
+  font-weight: 800;
+  margin-top: 14px;
+  color: #f8fafc;
+}
+
+/* ================= PAYMENT OPTIONS ================= */
+.payment-option {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.payment-option:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.payment-option input {
+  accent-color: #3b82f6;
+}
+
+.payment-option span {
+  color: #e5e7eb;
+  font-weight: 500;
+}
+
+/* ================= DYNAMIC PAYMENT AREA ================= */
+.payment-dynamic {
+  margin-top: 14px;
+}
+
+/* COMMON BOX */
+.pay-box {
+  background: rgba(255,255,255,0.06);
+  border-radius: 14px;
+  padding: 16px;
+  margin-top: 12px;
+}
+
+/* HIDE */
+.hidden {
+  display: none;
+}
+
+/* ================= COD ================= */
+.cod-text {
+  text-align: center;
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+/* ================= UPI ================= */
+.upi-title {
+  text-align: center;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 12px;
+}
+
+.qr-img {
+  width: 240px;
+  height: 240px;
+  display: block;
+  margin: 12px auto;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 14px;
+}
+
+.upi-note {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* ================= CARD ================= */
+.pay-box input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #1e293b;
+  background: #020617;
+  color: #f8fafc;
+  margin-bottom: 12px;
+}
+
+.card-row {
+  display: flex;
+  gap: 12px;
+}
+
+/* ================= PAY BUTTON ================= */
+.place-order-btn {
+  margin-top: 22px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #22d3ee, #3b82f6);
+  color: #020617;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(59,130,246,0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.place-order-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(59,130,246,0.65);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 480px) {
+  .payment-card {
+    padding: 24px;
+  }
+
+  .qr-img {
+    width: 200px;
+    height: 200px;
+  }
+}

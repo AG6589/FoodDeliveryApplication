@@ -1,0 +1,171 @@
+@charset "UTF-8";
+/* ================= NAVBAR ================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 40px; 
+  padding: 14px 32px;
+  background: rgba(2, 6, 23, 0.95);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid #1e293b;
+}
+/* SEARCH */
+.nav-right {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-right input {
+    background: #020617;
+    border: 1px solid #1e293b;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+.nav-right button {
+    background: linear-gradient(135deg, #2563eb, #22c55e);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  font-size: 15px;
+  color: #94a3b8;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+.nav-links a {
+  outline: none;
+}
+
+.nav-links a:focus,
+.nav-links a:active {
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* CART BADGE */
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -12px;
+
+  background: #ef4444;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* RIGHT SIDE */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-right input {
+  padding: 8px 14px;
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 999px;
+  color: #e5e7eb;
+  outline: none;
+  width: 200px;
+}
+
+.nav-right input::placeholder {
+  color: #64748b;
+}
+
+/* ================= CHECKOUT / ADDRESS NAVBAR ================= */
+.checkout-navbar {
+  gap: 24px;
+}
+
+a {
+  text-decoration: none;
+}
+/* Hide search on checkout pages */
+.checkout-navbar .nav-right input {
+  display: none;
+}
+
+/* Replace checkout button with step indicator */
+.checkout-steps {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.checkout-steps span {
+  color: #64748b;
+  position: relative;
+}
+
+.checkout-steps span.active {
+  color: #22c55e;
+}
+
+.checkout-steps span::after {
+  content: "›";
+  margin-left: 12px;
+  color: #475569;
+}
+
+.checkout-steps span:last-child::after {
+  display: none;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 18px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-right input {
+    display: none;
+  }
+}
